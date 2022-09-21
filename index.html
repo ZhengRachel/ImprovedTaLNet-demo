@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TaLNet2-demo</title>
+</head>
+
+<body>
+<h2>Demos for &quot;Improved methods of voice reconstruction from silentent tongues and lips based on pseudo labels and domain adversarial training &quot; </h2>
+<p>Paper: TO DO</p>
+<p>Authors: Rui-Chen Zheng, Zhen-Hua Ling</p>
+<p>Abstract: This paper mainly focuses on the task of voice reconstruction from ultrasound tongue images and optical lip videos in silent speaking mode, where people only activate their intraoral and extra-oral articulators without producing sound.
+  We propose to employ a method built on pseudo labels and domain adversarial training with a new iterative training strategy to improve the quality of speech recovered from
+  silent tongues and lips. Experiments show that our proposed method dramatically improves reconstructed speech quality in silent speaking mode compared to the baseline. When using an ASR model for speech recognition, the WER of our
+  proposed method decreases by over 15%. At the same time, our proposed method also outperforms the baseline on the reconstructed speech quality in vocalized articulating mode,
+  reducing WER by about 10%</p><hr />
+<h3>1. Comparison of silentent Utterances</h3>
+<p>
+    <strong><font color="#FF0000" size="4">Note: TaLNet denotes the original TaLNet and Proposed denotes our proposed method leveraging pseudo labels and domain adversarial training.</font></strong>
+</p>
+<table width="600" border="1">
+  <tr>
+    <td>TaLNet</td>
+    <td>Proposed</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/48ms-037_sil-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/48ms-037_sil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+   	</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/50ms-030_xsil-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/50ms-030_xsil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/25fs-031_xsil-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/25fs-031_xsil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/72fe-034_xsil-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/72fe-034_xsil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+</table>
+
+
+<h3>2. Comparison of Vocalized Utterances</h3>
+<p>
+    <strong><font color="#FF0000" size="4">Note: TaLNet denotes the original TaLNet and Proposed denotes our proposed method leveraging pseudo labels and domain adversarial training.</font></strong>
+</p>
+<table width="600" border="1">
+  <tr>
+    <td>TaLNet</td>
+    <td>Proposed</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/10me-005_xaud-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/10me-005_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+   	</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/77ms-006_xaud-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/77ms-006_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/26fs-005_xaud-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/26fs-005_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/72fe-009_xaud-baseline.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/72fe-009_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+</table>
+
+<h3>3. Ablation Studies in silentent Speaking Mode</h3>
+<p>
+    <strong><font color="#FF0000" size="4">Note: Proposed denotes our proposed method leveraging pseudo labels and domain adversarial training; Proposed* denotes our proposed method without iterative training strategy; and Proposed-DTW denotes our proposed method only leveraging DTW-generated pseudo labels.</font></strong>
+</p>
+<table width="600" border="1">
+  <tr>
+    <td>Proposed</td>
+    <td>Proposed*</td>
+    <td>Proposed-DTW</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/48ms-037_sil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+    	<video src="silent/48ms-037_sil-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+   	</td>
+    <td>
+        <video src="silent/48ms-037_sil-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+   	</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/50ms-030_xsil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/50ms-030_xsil-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/50ms-030_xsil-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/25fs-031_xsil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/25fs-031_xsil-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/25fs-031_xsil-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="silent/72fe-034_xsil-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/72fe-034_xsil-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="silent/72fe-034_xsil-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+</table>
+
+<h3>4. Ablation Studies in Vocalized Speaking Mode</h3>
+<p>
+    <strong><font color="#FF0000" size="4">Note: Proposed denotes our proposed method leveraging pseudo labels and domain adversarial training; Proposed* denotes our proposed method without iterative training strategy; and Proposed-DTW denotes our proposed method only leveraging DTW-generated pseudo labels.</font></strong>
+</p>
+<table width="600" border="1">
+  <tr>
+    <td>Proposed</td>
+    <td>Proposed*</td>
+    <td>Proposed-DTW</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/10me-005_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+    	<video src="vocalized/10me-005_xaud-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+   	</td>
+    <td>
+        <video src="vocalized/10me-005_xaud-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+   	</td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/77ms-006_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/77ms-006_xaud-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/77ms-006_xaud-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/26fs-005_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/26fs-005_xaud-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/26fs-005_xaud-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+  <tr>
+    <td>
+        <video src="vocalized/72fe-009_xaud-DA.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/72fe-009_xaud-DA1.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+    <td>
+        <video src="vocalized/72fe-009_xaud-DTW.mp4" controls="controls" width="600px" height="200px"></video>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
